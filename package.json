@@ -1,0 +1,17 @@
+{
+  "name": "Treasure_Hunt_2025",
+  "private": true,
+  "description": "Monorepo for the Treasure_Hunt_2025 web application.",
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "lint": "turbo run lint"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.15.0",
+  "devDependencies": {
+    "turbo": "latest"
+  }
+}
