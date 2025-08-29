@@ -3,13 +3,14 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon index.js",
-    "lint": "eslint ."
-  },
+  "dev": "functions-framework --target=getGameData",
+  "lint": "eslint ."
+},
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@google-cloud/functions-framework": "^4.0.0",
     "google-auth-library": "^10.2.1",
     "googleapis": "^157.0.0"
   },

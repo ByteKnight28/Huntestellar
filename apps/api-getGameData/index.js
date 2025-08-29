@@ -1,14 +1,9 @@
 // apps/api-getGameData/index.js
 
-/**
+const { getGameData } = require('./controllers/game.controller');
 
- *
- * @param {Object} req Cloud Functions request context.
- * @param {Object} res Cloud Functions response context.
+/**
+ * Main entry point for the getGameData Google Cloud Function.
+ * This now passes the request to our controller.
  */
-exports.getGameData = (req, res) => {
-    console.log("getGameData function was triggered!");
-    
-    // For now, just send a simple success message
-    res.status(200).send("Hello from getGameData!");
-  };
+exports.getGameData = getGameData;
