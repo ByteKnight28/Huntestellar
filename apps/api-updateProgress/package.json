@@ -1,0 +1,21 @@
+{
+    "name": "@Treasure_Hunt_2025/api-updateprogress",
+    "version": "1.0.0",
+    "main": "index.js",
+    "scripts": {
+      "dev": "functions-framework --target=updateProgress --port=8081",
+      "lint": "eslint ."
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+      "@google-cloud/functions-framework": "^4.0.0",
+      "google-auth-library": "^10.2.1",
+      "googleapis": "^157.0.0"
+    },
+    "devDependencies": {
+        "eslint": "^9.34.0",
+        "nodemon": "^3.1.10"
+    }
+  }

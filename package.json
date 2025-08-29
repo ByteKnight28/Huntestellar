@@ -3,10 +3,10 @@
   "private": true,
   "description": "Monorepo for the Treasure_Hunt_2025 web application.",
   "scripts": {
-    "build": "turbo run build",
-    "dev": "turbo run dev",
-    "lint": "turbo run lint"
-  },
+  "build": "turbo run build",
+  "dev": "pnpm --parallel --filter \"@Treasure_Hunt_2025/*\" dev",
+  "lint": "turbo run lint"
+},
   "keywords": [],
   "author": "",
   "license": "ISC",
