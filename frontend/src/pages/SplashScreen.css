@@ -1,0 +1,40 @@
+/* src/pages/SplashScreen.css */
+
+.splash-screen {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  /* Use min-height and 100vh to ensure it fills the entire screen height */
+  min-height: 100vh;
+  text-align: center;
+  padding: 0 20px;
+}
+ 
+.splash-content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  /* We remove justify-content and add padding-top to push the logo down */
+  padding-top: 20vh;
+  align-items: center;
+}
+ 
+.title {
+  width: 85%;
+  max-width: 300px;
+  height: auto;
+  margin-bottom: 1rem;
+}
+ 
+.tagline {
+  font-style: italic;
+  color: #aaa;
+}
+ 
+.footer {
+  width: 100%;
+  padding: 2rem 0;
+  font-size: 0.8rem;
+  color: #aaa;
+}

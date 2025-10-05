@@ -3,6 +3,7 @@
 const { google } = require('googleapis');
 const { GoogleAuth } = require('google-auth-library');
 const path = require('path');
+const fs = require('fs'); // Import the 'fs' module for reading files
 
 // The scope required for Google Sheets access
 const SCOPES = ['https://www.googleapis.com/auth/spreadsheets'];
@@ -12,14 +13,22 @@ const SCOPES = ['https://www.googleapis.com/auth/spreadsheets'];
  * @returns {Promise<JWT>} An authorized JWT client.
  */
 async function getAuthClient() {
+    // Corrected path to find credentials.json in the project root
+    // This assumes the 'lib' folder is one level inside the function's root
+    const keyPath = path.join(__dirname, '..', 'credentials.json');
+
+    // Read the contents of the credentials file
+    const keys = JSON.parse(fs.readFileSync(keyPath, 'utf8'));
+
     const auth = new GoogleAuth({
-      // 2. Use path.join to create a reliable path
-      keyFile:'credentials.json',
+      // Use the modern 'credentials' option instead of 'keyFile'
+      credentials: keys,
       scopes: SCOPES,
     });
+    
     const client = await auth.getClient();
     return client;
-  }
+}
 
 /**
  * Creates an authenticated instance of the Google Sheets API.
@@ -27,12 +36,11 @@ async function getAuthClient() {
  */
 async function getSheetsInstance() {
     const authClient = await getAuthClient();
-    // CORRECTED: Removed the curly braces from { sheets }
     const sheets = google.sheets({
       version: 'v4',
       auth: authClient,
     });
     return sheets;
-  }
+}
 
 module.exports = { getSheetsInstance };
