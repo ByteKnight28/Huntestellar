@@ -2,32 +2,30 @@
 
 const gameService = require('../services/game.service');
 
-/**
- * Handles the GET /gameData request.
- * @param {Object} req The request object.
- * @param {Object} res The response object.
- */
 async function getGameData(req, res) {
-  try {
-    // Get the phone number from the request's body
-    const { phoneNumber } = req.body;
+  // --- START CORS LOGIC ---
+  // Set CORS headers to allow requests from any origin
+  // In production, you should replace '*' with your actual frontend URL (e.g., 'https://your-app-name.vercel.app')
+  res.set('Access-Control-Allow-Origin', '*');
+  res.set('Access-Control-Allow-Methods', 'POST, OPTIONS');
+  res.set('Access-Control-Allow-Headers', 'Content-Type');
 
-    // Check if a phone number was provided
+  // Handle preflight (OPTIONS) requests
+  if (req.method === 'OPTIONS') {
+    return res.status(204).send('');
+  }
+  // --- END CORS LOGIC ---
+
+  try {
+    const { phoneNumber } = req.body;
     if (!phoneNumber) {
       return res.status(400).json({ message: 'Phone number is required.' });
     }
-
-    // Call the service to do the actual work
     const gamePackage = await gameService.buildGamePackage(phoneNumber);
-
-    // If the service returns nothing, the team wasn't found
     if (!gamePackage) {
       return res.status(404).json({ message: 'Team not found.' });
     }
-
-    // Success! Send the game data back to the app
     return res.status(200).json(gamePackage);
-
   } catch (error) {
     console.error('Error in getGameData controller:', error);
     return res.status(500).json({ message: 'Internal Server Error' });
