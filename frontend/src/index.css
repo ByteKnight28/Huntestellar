@@ -1,6 +1,33 @@
 /* src/index.css */
 
 /* A modern CSS reset */
+/* Add this to the TOP of your main global CSS file */
+
+@font-face {
+  font-family: 'ERODED PERSONAL USE';
+  /* ❗ IMPORTANT: Update this path to where you saved the font file */
+  src: url('/fonts/ERODED PERSONAL USE.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Bebas Neue';
+  /* ❗ IMPORTANT: Update this path to where you saved the font file */
+  src: url('/fonts/BebasNeue-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* ... the rest of your global styles, like the body styles below ... */
+
+body {
+  margin: 0;
+  background-color: #202020;
+  color: #E0E0E0;
+  font-family: Arial, sans-serif;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -36,3 +63,5 @@ body::after {
   pointer-events: none;
   z-index: 100;
 }
+
+
