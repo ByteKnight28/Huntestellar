@@ -1,3 +1,4 @@
+/*
 // src/App.jsx
 import React, { useState } from 'react';
 import AuthScreen from './pages/AuthScreen.jsx';
@@ -16,7 +17,7 @@ function App() {
     <div className="app-container">
       {/* If we have game data, show the Welcome message.
         Otherwise, show the AuthScreen and pass it the success handler function.
-      */}
+      }
       {gameData ? (
         <div>
           <h1>Welcome, {gameData.teamData.teamName}!</h1>
@@ -25,6 +26,20 @@ function App() {
       ) : (
         <AuthScreen onJoinSuccess={handleJoinSuccess} />
       )}
+    </div>
+  );
+}
+
+export default App;
+*/
+// In App.js
+import React from 'react';
+import Leaderboard from './pages/leaderboard.jsx'; // Adjust path if needed
+
+function App() {
+  return (
+    <div className="App">
+      <Leaderboard />
     </div>
   );
 }
