@@ -53,3 +53,21 @@ function App() {
 }
 
 export default App;
+
+// // src/App.jsx
+// import React from 'react';
+// import './App.css';
+
+// // 1. Make sure this import path is CORRECT.
+// //    If Answer.jsx is in a 'components' folder, the path should be './components/Answer.jsx'
+// import Answer from './pages/answer.jsx'; 
+
+// function App() {
+//   // 2. We are now returning the Answer component directly,
+//   //    bypassing the login logic.
+//   return (
+//     <Answer />
+//   );
+// }
+
+// export default App;
