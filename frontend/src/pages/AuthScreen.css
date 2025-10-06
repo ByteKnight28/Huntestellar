@@ -1,4 +1,8 @@
 /* src/pages/AuthScreen.css */
+
+*{
+  font-family: 'Power Grotesk', sans-serif;
+}
 .auth-screen {
     display: flex;
     flex-direction: column;
