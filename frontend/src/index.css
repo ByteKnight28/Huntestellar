@@ -1,5 +1,18 @@
 /* src/index.css */
+@font-face {
+  font-family: 'Power Grotesk'; /* You can name it whatever you like */
+  src: url('./assets/fonts/power_grotesk/PowerGrotesk-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 
+@font-face {
+  font-family: 'ERODED PERSONAL USE';
+  /* Make sure this path exactly matches your font file's location and name */
+  src: url('./assets/fonts/eroded-personal-use/ERODED PERSONAL USE.ttf') format('truetype'); 
+  font-weight: normal;
+  font-style: normal;
+}
 /* A modern CSS reset */
 /* Add this to the TOP of your main global CSS file */
 
@@ -39,15 +52,13 @@ html, body, #root {
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Power Grotesk', sans-serif; /* Set the new default font */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #1c1c1c;
   color: #e0e0e0;
-  min-height: 100vh; /* Fallback for older devices */
-  position: relative; /* Needed for the grainy overlay */
+  min-height: 100vh;
+  position: relative;
 }
 
 /* This pseudo-element creates the grainy overlay on the whole page */
