@@ -46,13 +46,29 @@ function App() {
 
   return (
     <div className="app-container">
+<<<<<<< HEAD
+      {/* If we have game data, show the Welcome message.
+        Otherwise, show the AuthScreen and pass it the success handler function.*/
+      }
+      {gameData ? (
+        <div>
+          <h1>Welcome, {gameData.teamData.teamName}!</h1>
+          <p>Game data loaded. Ready to play!</p>
+        </div>
+      ) : (
+        <AuthScreen onJoinSuccess={handleJoinSuccess} />
+      )}
+=======
       {/* Pass the gameData and the logout function to all child routes */}
       <Outlet context={{ onJoinSuccess: handleJoinSuccess, gameData, onLogout: handleLogout }} />
+>>>>>>> c5d05a724428351a134da6e9b281c993bbc2e64e
     </div>
   );
 }
 
 export default App;
+<<<<<<< HEAD
+=======
 
 // // src/App.jsx
 // import React from 'react';
@@ -71,3 +87,4 @@ export default App;
 // }
 
 // export default App;
+>>>>>>> c5d05a724428351a134da6e9b281c993bbc2e64e
