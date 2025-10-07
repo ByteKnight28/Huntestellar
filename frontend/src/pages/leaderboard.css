@@ -1,0 +1,113 @@
+.page-wrapper {
+  width: 100%;
+  max-width: 600px;
+  padding: 20px;
+}
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px 20px 10px;
+  font-family: 'Bebas Neue', sans-serif;
+  color: #d1d1d1;
+  font-size: 1.2rem;
+}
+
+.header-logo {
+  width: 36px;
+  height: 36px;
+  background-color: #444;
+  border-radius: 50%;
+  border: 2px solid #666;
+}
+
+.leaderboard-container {
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  padding: 40px 30px;
+}
+
+/* --- Header & Titles --- */
+.leaderboard-header {
+  margin-bottom: 30px;
+}
+
+.leaderboard-title {
+  color: white;
+  font-family: 'ERODED PERSONAL USE', Impact, sans-serif;
+  font-size: clamp(4rem, 20vw, 6.25rem);
+  font-weight: 400;
+  line-height: 90%;
+  letter-spacing: 2px;
+  margin: 1rem 0 2rem 0;
+  text-transform: uppercase;
+}
+
+.leaderboard-subtitle {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  color: #d1d1d1;
+  margin: 10px 0 0;
+}
+
+/* --- Leaderboard List --- */
+.leaderboard-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.leaderboard-item {
+  font-family: 'Bebas Neue', sans-serif;
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.7);
+  border-radius: 8px; /* Added rounded corners */
+  padding: 15px 20px;
+  font-size: 1.4rem;
+  letter-spacing: 0.5px;
+}
+
+.rank {
+  font-weight: bold;
+  margin-right: 15px;
+}
+
+.team-name {
+  flex-grow: 1;
+  text-align: left;
+}
+
+.score {
+  font-weight: bold;
+  margin-left: 15px;
+}
+
+/* --- Special Item States --- */
+.leaderboard-item.first-place,
+.leaderboard-item.second-place {
+  border: none;
+}
+
+.leaderboard-item.first-place {
+  background-color: #3895D3;
+  font-weight: bold;
+  color: #fff;
+  /* Fine-grained noise texture */
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800"><filter id="noise"><feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="3" stitchTiles="stitch"/></filter><rect width="100%" height="100%" filter="url(%23noise)" opacity="0.15"/></svg>');
+}
+
+.leaderboard-item.second-place {
+  background-color: #f0f0f0;
+  color: #222;
+  font-weight: bold;
+  /* Fine-grained noise texture */
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800"><filter id="noise"><feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="3" stitchTiles="stitch"/></filter><rect width="100%" height="100%" filter="url(%23noise)" opacity="0.15"/></svg>');
+}
