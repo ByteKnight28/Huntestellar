@@ -1,20 +1,20 @@
 // src/pages/AuthScreen.jsx
 import React, { useState, useEffect } from 'react';
+import { useOutletContext } from 'react-router-dom'; // <-- 1. Import the hook
 import './AuthScreen.css';
-import Logo from '../components/logo';
+import Logo from '../components/Logo'; // Use your existing Logo component
 
-function AuthScreen({ onJoinSuccess }) {
-
+function AuthScreen() {
+  const { onJoinSuccess } = useOutletContext(); // <-- 2. Get the function from context
   const [showForm, setShowForm] = useState(false);
   const [phoneNumber, setPhoneNumber] = useState('');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
-  // This effect triggers the animation after the component mounts
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowForm(true);
-    }, 3000); // Wait 3 seconds before starting the animation
+    }, 3000);
     return () => clearTimeout(timer);
   }, []);
 
@@ -40,7 +40,7 @@ function AuthScreen({ onJoinSuccess }) {
       if (!response.ok) {
         throw new Error(data.message || 'Team not found.');
       }
-      onJoinSuccess(data);
+      onJoinSuccess(data); // Call the function from App.jsx
     } catch (err) {
       setError(err.message);
     } finally {
@@ -49,7 +49,6 @@ function AuthScreen({ onJoinSuccess }) {
   };
 
   return (
-    // The `show-form` class will be added after 3s, triggering all animations
     <div className={`auth-screen ${showForm ? 'show-form' : ''}`}>
       <div className="auth-content">
         <Logo className="auth-logo" />
@@ -58,7 +57,6 @@ function AuthScreen({ onJoinSuccess }) {
         <form className="auth-form" onSubmit={handleJoinTeam}>
           <div className="form-content-wrapper">
             <label htmlFor="phone-number">Enter your Team Leader's Phone Number</label>
-            <br />
             <div className="phone-input-wrapper">
               <span>+91</span>
               <input
