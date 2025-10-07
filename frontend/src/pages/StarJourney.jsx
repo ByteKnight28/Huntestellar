@@ -15,7 +15,7 @@ function StarJourney() {
   const planetDataMap = {
     '1': { name: "ORION'S ODYSSEY", color: 'deepskyblue' }, // Blue
     '2': { name: 'ENDLESS WHISPERS', color: 'darkorange' }, // Orange
-    '3': { name: 'Whatney’s Voyage', color: 'limegreen' }, // Green
+    '3': { name: "Whatney's Voyage", color: 'limegreen' }, // Green
     '4': { name: 'ARCTURUS', color: 'crimson' } // Red
   };
 
