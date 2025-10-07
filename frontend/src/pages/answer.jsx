@@ -21,7 +21,7 @@ const Answer = () => {
         <h2 className="header-title">Answer</h2>
         {/* Placeholder for the circular logo on the right */}
         <div className="logo">
-            <img src="\src\assets\APS_SVG 1.svg" alt="Your App Logo"></img>
+            <img src="\src\assets\aps-logo.svg" alt="Your App Logo"></img>
         </div>
       </header>
 
