@@ -46,7 +46,7 @@ function AnswerPage() {
     // 4. If the hashes match, THEN call the API to update the player's progress.
     setLoading(true);
     try {
-      const response = await fetch('https://asia-south1-treasurhunt.cloudfunctions.net/updateProgress', {
+      const response = await fetch(import.meta.env.VITE_API_UPDATE_PROGRESS, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -56,7 +56,7 @@ function AnswerPage() {
         }),
       });
 
-      const update = await fetch('https://asia-south1-treasurhunt.cloudfunctions.net/getGameData', {
+      const update = await fetch(import.meta.env.VITE_API_GET_GAME_DATA, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ phoneNumber: gameData.teamData.phoneNumber}),

@@ -56,7 +56,7 @@ function Path2Clue4() {
   return (
     <div className="clue-page-container">
       <header className="clue-header">
-        <div className="back-arrow" onClick={() => navigate(-left)}>&lt;</div>
+        <div className="back-arrow" onClick={() => navigate(-1)}>&lt;</div>
         <h1 className="header-text">Your Journey</h1>
         <img src={societyLogo} alt="Logout" className="logout-logo" onClick={onLogout} />
       </header>

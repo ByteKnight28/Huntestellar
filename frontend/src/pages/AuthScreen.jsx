@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { useOutletContext } from 'react-router-dom'; // <-- 1. Import the hook
 import './AuthScreen.css';
-import Logo from '../components/Logo'; // Use your existing Logo component
+import Logo from '../components/Logo';
 
 function AuthScreen() {
   const { onJoinSuccess } = useOutletContext(); // <-- 2. Get the function from context
@@ -30,7 +30,7 @@ function AuthScreen() {
     }
 
     try {
-      const response = await fetch('https://asia-south1-treasurhunt.cloudfunctions.net/getGameData', {
+      const response = await fetch(import.meta.env.VITE_API_GET_GAME_DATA, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ phoneNumber: `${phoneNumber}` }),
