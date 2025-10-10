@@ -1,0 +1,28 @@
+{
+  "prologueTitle": "PROLOGUE",
+  "prologueText": "Your Odyssey awaits, a journey to the stars.\n\nEarth is taking its final breaths. Once our shield, its magnetic core is now breaking apart. But in the midst of this fall, there is a new hope shining in a system far, far away, from a planet “similar” to ours. A wormhole has been opened near Saturn.\n\nYears ago a message was sent to the stars into the abyss without any hope of reply, fortunately it was replied, from a species far superior to us in intelligence. In these dire times our only option was to ask for help and our plea has been answered. An invitation to a different planet in a different star. You are chosen to seek solutions for mankind. To a world where humanity can rise again.\n\nAnd so… your Hunterstellar journey begins through the wormhole, with a little hope and many trials ahead.",
+  "title": "CLUE 1",
+  "storyText": "You reach the planet, travelling through space and time. Comms stutter eerily, a whisper from the beings echoes through your ship.\n\n“Coordinates for landing are encrypted and clearance codes are inbound. If you want my aid, you'll need to decrypt them first. Prove your worth, or be left adrift among the stars.”",
+  "riddles": [
+    {
+      "type": "Coordinates",
+      "text": "In front of the blue square, the place comes after the yard as well, you'll avoid coming here, maybe that's all I can tell."
+    },
+    {
+      "type": "Clearance code - XXY",
+      "lines": [
+        "X you call a great invention,",
+        "But the inventor matters more.",
+        "My planet's Schwarzschild is X,",
+        "A boundary no one can ignore.",
+        "",
+        "I gaze upon the sky so cold,",
+        "Canis' master draws his bow.",
+        "On his belt the clues unfold",
+        "Y bright stars put on a show."
+      ],
+      "formula": "(X =(GIF (2GM) / c²))",
+      "note": "(Use SI Units and standard physics notations…)"
+    }
+  ]
+}

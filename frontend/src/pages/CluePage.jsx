@@ -1,23 +1,52 @@
+// src/pages/CluePage.jsx
 import React from 'react';
+// 1. Import the useNavigate hook from React Router
+import { useOutletContext, Navigate, useNavigate } from 'react-router-dom';
 import './CluePage.css';
+import societyLogo from '../assets/aps-logo.svg';
+
 
 const CluePage = () => {
+  const { gameData, onLogout } = useOutletContext();
+  const navigate = useNavigate(); // 2. Create an instance of the navigate function
+
+  // 3. Create a handler function to navigate back
+  const handleBackClick = () => {
+    navigate('/starjourney'); // This will take the user to the StarJourney page
+  };
+
+  const planetDataMap = {
+    '1': { name: "ORION'S ODYSSEY", color: 'deepskyblue' }, // Blue
+    '2': { name: 'ENDLESS WHISPERS', color: 'darkorange' }, // Orange
+    '3': { name: "WHATNEY'S VOYAGE", color: 'limegreen' }, // Green
+    '4': { name: "BOHR'S FRONTIER", color: 'crimson' } // Red
+  };
+
+  const assignedPath = gameData?.teamData?.assignedPath;
+  const planetInfo = planetDataMap[assignedPath] || { name: 'Unknown Galaxy', color: 'white' };
+
   return (
     <div className="clue-page-container">
       <header className="clue-header">
-        <div className="header-group"></div>
-        <div className="back-arrow">&lt;</div>
+        {/* 4. Add the onClick event to your back arrow */}
+        <div className="back-arrow" onClick={handleBackClick}>
+          &lt;
+        </div>
         <h1 className="header-text">Your Journey</h1>
         <div className="logo">
-            <img src="\src\assets\APS_SVG 1.svg" alt="Your App Logo"></img>
+        <img 
+          src={societyLogo} 
+          alt="Logout" 
+          className="society-logo logout-logo"
+          onClick={onLogout} 
+        />
         </div>
       </header>
 
       <main className="clue-content">
-        {/* UPDATED: "CLUE" and "1" are now in separate spans */}
-        <h2 className="clue-number">
-          <span>CLUE </span>
-          <span className="clue-digit">I</span>
+        <h2 className="clue-number" style={{ color: planetInfo.color }}>
+          <span className="clue-text" >CLUE </span>
+          <span className="clue-digit">1</span>
         </h2>
         
         <h3 className="clue-title">PROLOGUE</h3>
@@ -43,7 +72,7 @@ const CluePage = () => {
       </main>
 
       <footer className="clue-footer">
-        <button className="scan-button">Scan QR to Answer</button>
+        <button className="scan-button" onClick={() => navigate('/scanner')}>Scan QR to Answer</button>
       </footer>
     </div>
   );

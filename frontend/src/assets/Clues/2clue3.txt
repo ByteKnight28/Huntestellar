@@ -1,0 +1,17 @@
+CLUE 3:
+Phoenix : Seekers of renewal, you have traveled far beyond despair’s grasp. Ahead lies a trial forged in the spirit of endless transformation and hope. Prepare to face the riddle of one who, like the immortal flame, is ever reborn anew. The fate of the earth rests with him—the answer to this riddle. Solve it, and the path to your salvation will unfold.
+
+“Two hearts beat with endless time,
+A box of blue defies all rhyme.
+From face to face, they never rest,
+A timeless rebel on a quest.
+No sword or gun, just cunning mind,
+Through space and years, the lost you'll find.”
+
+“In the silence where no footsteps fall, a world lies still, a hollow hall.
+Seek not the living, but answers deep, where secrets of time and fate do sleep.
+The key you seek amid this plight, awaits the bearer of endless light.
+The solution to your dreadful feeling is a sphere of death but also of healing.”
+
+The answer is the name the man is known as in one word in (PascalCase).
+Go to the place he is in, scan the qr and write the answer to get the next clue.

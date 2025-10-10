@@ -7,30 +7,23 @@
 }
 
 @font-face {
+  font-family: 'Bebas Neue'; /* You can name it whatever you like */
+  src: url('./assets/fonts/Bebas_Neue/BebasNeue-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
   font-family: 'ERODED PERSONAL USE';
   /* Make sure this path exactly matches your font file's location and name */
   src: url('./assets/fonts/eroded-personal-use/ERODED PERSONAL USE.ttf') format('truetype'); 
   font-weight: normal;
   font-style: normal;
+  font-display: swap; /* Improves font loading performance */
 }
 /* A modern CSS reset */
 /* Add this to the TOP of your main global CSS file */
 
-@font-face {
-  font-family: 'ERODED PERSONAL USE';
-  /* ❗ IMPORTANT: Update this path to where you saved the font file */
-  src: url('/fonts/ERODED PERSONAL USE.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Bebas Neue';
-  /* ❗ IMPORTANT: Update this path to where you saved the font file */
-  src: url('/fonts/BebasNeue-Regular.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
 
 /* ... the rest of your global styles, like the body styles below ... */
 

@@ -1,11 +1,8 @@
-// apps/api-getGameData/lib/sheets.client.js
-
 const { google } = require('googleapis');
 const { GoogleAuth } = require('google-auth-library');
 const path = require('path');
 const fs = require('fs'); // Import the 'fs' module for reading files
 
-// The scope required for Google Sheets access
 const SCOPES = ['https://www.googleapis.com/auth/spreadsheets'];
 
 /**
@@ -14,7 +11,6 @@ const SCOPES = ['https://www.googleapis.com/auth/spreadsheets'];
  */
 async function getAuthClient() {
     // Corrected path to find credentials.json in the project root
-    // This assumes the 'lib' folder is one level inside the function's root
     const keyPath = path.join(__dirname, '..', 'credentials.json');
 
     // Read the contents of the credentials file
