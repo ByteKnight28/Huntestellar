@@ -1,5 +1,5 @@
 // src/App.jsx
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, Suspense } from 'react'; // 1. Import Suspense
 import { Outlet, useNavigate } from 'react-router-dom';
 import './App.css';
 
@@ -34,7 +34,10 @@ function App() {
 
   return (
     <div className="app-container">
-      <Outlet context={{ onJoinSuccess: handleJoinSuccess, gameData, onLogout: handleLogout }} />
+      {/* 2. Wrap the Outlet in a Suspense component with a fallback */}
+      <Suspense fallback={<div className="loading-fallback">Loading Mission...</div>}>
+        <Outlet context={{ onJoinSuccess: handleJoinSuccess, gameData, onLogout: handleLogout }} />
+      </Suspense>
     </div>
   );
 }
