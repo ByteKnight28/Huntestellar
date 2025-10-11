@@ -19,7 +19,7 @@ const clueData = {
       },
       {
         type: "ANSWER TO BE ENTERED",
-        text: "Cigar and Lemmon are two stars and Cigar is X times as far from Earth as Lemmon. If both stars have the same luminosity, Cigar is Y times dimmer than Lemmon. Where X is the sum of all the digits of the pincode of your college. Think about your JEE Days and study and apply some common sense - https://smplu.link/study-material",
+        text: "CIGAR and LEMMON are two stars and CIGAR is X times as far from Earth as LEMMON. If both stars have the same luminosity, CIGAR is Y times dimmer than LEMMON. Where X is the sum of all the digits of the pincode of your college. Think about your JEE Days and study and apply some common sense - https://smplu.link/study-material",
         formula: "What is the value of \n(Y-20(X))*(X-Y)"
       }
     ]

@@ -4,19 +4,23 @@ import { useOutletContext, useNavigate, Navigate } from 'react-router-dom';
 import SHA256 from 'crypto-js/sha256';
 import '../CluePage.css';
 import societyLogo from '../../assets/aps-logo.svg';
-// import clueImage from '../../assets/your_clue3_qrcode.png'; 
+import clueImage from '../../assets/images/3Clue3.png'; 
 // --- Clue Configuration ---
 const CLUE_ID = 3;
 
 // --- Clue Data (PASTE YOUR NEW DATA HERE) ---
 const clueData = {
   title: "CLUE 3",
-  storyText: "Leaving the Death Star behind now we start our journey in Columbus - faster and stealthier, saving years and centuries of time, because the planet's dying in some time. We will go to a planet you will find no moon, where our Dr. Mark Whatney resides - it is not Mars nor Venus, it is something which you will discover soon.\n\nYou have to visit a familiar place, the place newly found is a complete package in it. Go on search descending down the other gradient, crossing the stream and find the space of infinite possibilities, the place in space which we call Earth's neighbourhood.",
+  storyText: "Leaving the Death Star behind now we start our journey in Columbus - faster and stealthier, saving years and centuries of time, because the planet's dying in some time. We will go to a planet you will find no moon, where our Dr. Mark Whatney resides - it is not Mars nor Venus, it is something which you will discover soon.",
   riddles: [
+    {
+      type: "Map Guidance",
+      text: "You have to visit a familiar place, the place newly found is a complete package in it. Go on search descending down the other gradient, crossing the stream and find the space of infinite possibilities, the place in space which we call Earth's neighbourhood.",
+    },
     {
       type: "Answer To be entered",
       text: "On Mars, it was potatoes, here something sweet, what he has to eat, is your challenge to beat. Wandering here and there, in search of the planet WTF - Whatney's Terrestrial Find. Our brave warrior sent years ago for any emergencies like this had discovered this planet.\n\nGot It! Got It! You have found the planet! You can see it in front of you, the comms have connected to the base command of the planet, And Mark asks you!\n\n“What is my favourite delicacy known in India?” And you are puzzled, then he sends an encrypted message, you have to decode and give him the answer in a language we are conversing in right now! But remember one thing: this planet's linguistics are completely reversed. We say Hello! They say olleh! Everything is flipped in their language, even their math! His challenge is that he has Reverse the Deserver! But nothing's straight. In this Interstellar Journey - May the force be with you!",
-      // image: clueImage
+      image: clueImage
     }
   ]
 };

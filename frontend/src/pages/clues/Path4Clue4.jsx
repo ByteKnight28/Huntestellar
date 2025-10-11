@@ -6,8 +6,8 @@ import '../CluePage.css';
 import societyLogo from '../../assets/aps-logo.svg';
 
 // --- NEW: IMPORT YOUR IMAGES HERE ---
-// import clueImage1 from '../../assets/your_clue4_qr1.png';
-// import clueImage2 from '../../assets/your_clue4_qr2.png';
+import clueImage1 from '../../assets/images/4Clue4_1.png';
+import clueImage2 from '../../assets/images/4Clue_2.png';
 
 // --- Clue Data ---
 const clueData = {
@@ -16,12 +16,12 @@ const clueData = {
   riddles: [
     {
       type: "MAP GUIDANCE",
-      text: "48-79-78-65-38-73-48\n(Hint:Decrypt and Rearrange the code to find the hidden location.)\n\nLife is a Circle, Reach to Earth fast… You will find some agents there standing at the gate who will ask you for the password!",
-    //   images: [clueImage1, clueImage2]
+      text: "(Hint: Decrypt  and  Rearrange  the  code  to  find  the  hidden  location.)\n\nReach to Earth fast… You will find some agents there standing at the gate who will ask you for the PASSWORD!",
+      images: [clueImage1, clueImage2]
     },
     {
       type: "ANSWER TO BE ENTERED",
-      text: "“You got to know about a villain when you were at the previous log and the name of that villain is your Password.\" (Write the name in reverse order!!!)"
+      text: "“You got to know about a  VILLAIN  when you were at the previous log and the name of that villain is your PASSWORD.\" (Write the name in reverse order!!!)"
     }
   ]
 };
@@ -75,7 +75,7 @@ function Path4Clue4() {
             
             {/* --- NEW: MULTIPLE IMAGE RENDERING LOGIC --- */}
             {riddle.images && riddle.images.map((imgSrc, imgIndex) => (
-              <img key={imgIndex} src={imgSrc} alt={`Clue visual ${imgIndex + 1}`} className="clue-image" />
+              <img key={imgIndex} src={imgSrc} alt={`Clue visual ${imgIndex + 1}`} className="clue-image" style={{width:"300px",marginLeft:"27px"}} />
             ))}
             
             {riddle.lines && riddle.lines.map((line, lineIndex) => (

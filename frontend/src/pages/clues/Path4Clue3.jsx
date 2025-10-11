@@ -15,11 +15,12 @@ const clueData = {
     riddles: [
       {
         type: "MAP GUIDANCE",
-        text: "“It is an entity just like our home planet Earth, but here the time is very slow just because of a supermassive villain which slows its motion by its huge pull by a phenomenon discovered by Newton”"
+        text: "“It is an entity just like our home planet Earth, but here the time is very slow just because of a \"SUPERMASSIVE VILLAIN \" which slows its motion by its huge pull by a phenomenon discovered by Newton”"
       },
       {
         type: "ANSWER TO BE ENTERED TO UNLOCK THE VAULT",
-        text: "“I am the dust of a rusty world, where an old ocean's story is curled. I feel no rain, but a chilling wind's bite, and I hold the secrets of ancient light.” Name of that dust??"
+        text: "“I am the dust of a rusty world, where an old ocean's story is curled. I feel no rain, but a chilling wind's bite, and I hold the secrets of ancient light.” Name of that dust??",
+        note: "Take a SCREENSHOT of this page it will help you later !"
       }
     ]
   };

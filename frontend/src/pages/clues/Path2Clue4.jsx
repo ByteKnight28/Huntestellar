@@ -4,30 +4,29 @@ import { useOutletContext, useNavigate, Navigate } from 'react-router-dom';
 import SHA256 from 'crypto-js/sha256';
 import '../CluePage.css';
 import societyLogo from '../../assets/aps-logo.svg';
-// import clueImage from '../../assets/images/2Clue4.png';
+import clueImage from '../../assets/images/2Clue4.jpg';
 // --- Clue Configuration ---
 const CLUE_ID = 4;
 
 // --- Clue Data (PASTE YOUR NEW DATA HERE) ---
 const clueData = {
-    title: "CLUE 4",
-    storyText: "TVA guides you to your new home but warns about a historical ruler standing in your way….",
-    riddles: [
-      {
-        type: "Location on Campus :",
-        // This will display the image you imported above.
-        // image: clueImage
-      },
-      {
-        type: "Map Guidance:",
-        text: "Salvete, voyagers of time and space.\n\nI extend to you the code of salvation , an encrypted script, use my cipher to unveil the place you so ardently seek.\n\nIn this realm where hope and despair, light and darkness entwine in fragile balance, the keys to the decryption are different for each word, first the number of white leaves, then number of dark leaves, then the difference between white and dark, look closely at the picture.\n\nDecode this message, and your destination shall unfold before you.\n\n“VUL DIVS ILYH”"
-      },
-      {
-        type: "For the Answer to be Entered",
-        text: "Calculate the product of the number of light leaves and dark leaves that I have."
-      }
-    ]
-  };
+  title: "CLUE 4",
+  storyText: "The ship's sensors screamed to life. A pale turquoise world, haloed in shimmering rings and bathed in distant starlight.\n\nAtmosphere: breathable.\nTemperature: stable.\nMagnetic field: unusually strong.\n\nIt's a remnant of an ancient civilization gone extinct by volcano eruption.\nYou search for its coordinates but all you find is an alien transmission.\n\n“We are the inhabitants of this world.\n If you are seeing this message, it means we are gone.\n Our home once thrived, but the fire beneath our world rose faster than we could escape. The eruption ended our age, and with it, our kind.\nBefore the end, we built a system, a machine that will reshape the land, renew the air, and make this planet ready for life once more.\nTo guide those who might come after us, we created an artificial intelligence.\n It has been programmed to communicate in a form you would understand.\nTo bridge our worlds, it imitates one of your own, a historical being of wisdom and reason.\nThrough that voice, it will reveal our world's coordinates.\nYou may call it the World of The Fire.”",
+  riddles: [
+    {
+      type: "",
+      image: clueImage
+    },
+    {
+      type: "Map Guidance",
+      text: "Salvete, voyagers of time and space.\n\nI extend to you the code of salvation , an encrypted script, use my cipher to unveil the place you so ardently seek.\n\nIn this realm where hope and despair, light and darkness entwine in fragile balance, the keys to the decryption are different for each word, first the number of white leaves, then number of dark leaves, then the difference between white and dark, look closely at the picture.\n\nDecode this message, and your destination shall unfold before you.\n\n“VUL DIVS ILYH”"
+    },
+    {
+      type: "For the Answer to be Entered",
+      text: "X is the product of the number of light leaves and dark leaves that I have.\nAnd Y is the answer to the ultimate question of life.\nReport X + Y"
+    }
+  ]
+};
 
 // --- Component ---
 function Path2Clue4() {
@@ -71,7 +70,7 @@ function Path2Clue4() {
 
         {clueData.riddles.map((riddle, index) => (
           <div key={index} className="riddle-section" style={{ borderLeft: '3px solid rgb(192, 80, 25)' }}>
-            <h4 style={{color:'rgb(214, 90, 28)'}}>{riddle.type}</h4>
+            <h4 style={{color:'rgb(214, 90, 28)',whiteSpace: 'pre-wrap'}}>{riddle.type}</h4>
             {riddle.text && <p style={{ whiteSpace: 'pre-wrap' }}>{riddle.text}</p>}
             {riddle.image && <img src={riddle.image} alt="Clue visual" className="clue-image" />}
             {riddle.lines && riddle.lines.map((line, lineIndex) => (

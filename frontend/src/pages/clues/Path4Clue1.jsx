@@ -11,7 +11,7 @@ const CLUE_ID = 1;
 // --- Clue Data (PASTE YOUR NEW DATA HERE) ---
 const clueData = {
     prologueTitle: "Prologue",
-    prologueText: "Earth once alive with storms, tides, and the heartbeat of magma now drifts cold and hollow. The oceans have turned to glassy plains, the skies hang heavy with ash, and the stars glare down like indifferent eyes. The core of the fire that sustained us is gone. The magnetic field that once guarded our fragile world has fallen silent, leaving humanity naked beneath a storm of cosmic knives but…\n\n“ WE ARE NOT FINISHED ”",
+    prologueText: "Earth once alive with storms, tides, and the heartbeat of magma now drifts cold and hollow. The oceans have turned to glassy plains, the skies hang heavy with ash, and the stars glare down like indifferent eyes. The core of the fire that sustained us is gone. The magnetic field that once guarded our fragile world has fallen silent, leaving humanity naked beneath a storm of cosmic knives but…\n\n                                  “ WE ARE NOT FINISHED ”",
     title: "CLUE 1",
     storyText: "Through the wormhole a holographic message flickers to life. A mysterious ship appears, a scientist from a long-lost civilization. \"Your help is here\" they say, \"but to survive the extinction and save your civilization, you must prove your worth. The Planet of WTF (Waypoint Twenty Four)  is the only component strong enough to save your Humanity. It is hidden in plain sight, its secrets protected by my trials. Your travel begins through the wormhole the way of your return. Find the first clue in the place where you stand in a long queue for something that you don't like !”",
     riddles: [

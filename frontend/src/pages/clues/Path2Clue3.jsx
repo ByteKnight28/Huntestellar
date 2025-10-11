@@ -10,24 +10,23 @@ const CLUE_ID = 3;
 
 // --- Clue Data (PASTE YOUR NEW DATA HERE) ---
 const clueData = {
-    title: "CLUE 3",
-    storyText: "A wormhole has been discovered near Saturn.\n\nUSS Enterprise carries you through a wormhole into the depths of our galaxy.\n\nSuddenly you receive a transmission…..\nI have returned with news you must know, a new riddle awaits those who follow.\nPrepare yourself, for the path begins to flow.\n\nIt's the Third Whisper….",
-    riddles: [
-      {
-        type: "Location on Campus",
-        text: "“The first you glimpse when you step inside,\nWhere all your affairs are carefully tied.\nA house of guidance, firm and tall,\nFrom here, the paths extend to all.”"
-      },
-      {
-        type: "Map Guidance",
-        text: "“Lines and loops that twist and bend,\nA place where time itself tends.\nA man upon his throne keeps all aligned,\nUniverses destroyed if rules are left behind.\nIt oversees both time and space,\nAnd all the mighty stones are but paperweight”"
-      },
-      {
-        type: "Answer to be entered",
-        text: "Relativistic Mass : This is the quantity that depends on the velocity (v) of the object, increasing as the object's speed approaches the speed of light (c).\n\nCalculate the relativistic energy of a body which is moving at v = ((√3)/2)c\nAnd its rest mass = X + Y (in kg) where\nX = year our institute got established\nand Y = orbital period of haley's comet (closest integer) (in years)\nZ * 10^20 where Z is the nearest integer.\nCalculate Z",
-        formula: "E = mc²\nm = (rest mass)/√(1 - (v/c)²)",
-      }
-    ]
-  };
+  title: "CLUE 3",
+  storyText: "A wormhole has been discovered near Saturn, USS Enterprise carries you through a wormhole into the depths of our galaxy. Suddenly you receive a message…\n\nI have returned with news you must know, a new riddle awaits those who follow.\nPrepare yourself, for the path begins to flow.\n\nIt's the Third Whisper….",
+  riddles: [
+    {
+      type: "Location on Campus",
+      text: "“The first you glimpse when you step inside,\nWhere all your affairs are carefully tied.\nA house of guidance, firm and tall,\nFrom here, the paths extend to all.”"
+    },
+    {
+      type: "Map Guidance",
+      text: "“Lines and loops that twist and bend,\nA place where time itself tends.\nA man upon his throne keeps all aligned,\nUniverses destroyed if rules are left behind.\nIt oversees both time and space,\nAnd all the mighty stones are but paperweight”"
+    },
+    {
+      type: "Answer to be entered (in lower case)",
+      text: "I am a well where spacetime sinks,\nA silent mouth that starlight drinks.\nMy form is absent, my grip is sure,\nThe final, one-way, cosmic tour.\nA whisper says I'm born to fade,\nA page unwritten, a story unmade.\nYet only now, my shadow's thrown,\nA ring of fire 'round a throne of stone."
+    }
+  ]
+};
 
 // --- Component ---
 function Path2Clue3() {
