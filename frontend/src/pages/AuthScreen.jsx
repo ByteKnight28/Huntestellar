@@ -52,7 +52,7 @@ function AuthScreen() {
     <div className={`auth-screen ${showForm ? 'show-form' : ''}`}>
       <div className="auth-content">
         <Logo className="auth-logo" />
-        <p className="auth-tagline">Mankind was born on Earth but was never meant to die here</p>
+        <p className="auth-tagline" style={{paddingTop:'10px'}}>Mankind was born on Earth but was never meant to die here</p>
 
         <form className="auth-form" onSubmit={handleJoinTeam}>
           <div className="form-content-wrapper">

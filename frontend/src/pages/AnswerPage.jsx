@@ -8,7 +8,7 @@ const planetDataMap = {
   '1': { name: "ORION'S ODYSSEY", color: 'deepskyblue' },
   '2': { name: 'ENDLESS WHISPERS', color: 'rgba(233, 78, 0, 1)' },
   '3': { name: "WHATNEY'S VOYAGE", color: 'limegreen' },
-  '4': { name: "BOHR'S FRONTIER", color: 'crimson' }
+  '4': { name: "Aetherion Arc", color: 'crimson' }
 };
 
 function AnswerPage() {

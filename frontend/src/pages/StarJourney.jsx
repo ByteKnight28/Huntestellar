@@ -15,7 +15,7 @@ function StarJourney() {
     '1': { name: "ORION'S ODYSSEY", color: 'deepskyblue' },
     '2': { name: 'ENDLESS WHISPERS', color: 'rgba(233, 78, 0, 1)' },
     '3': { name: "WHATNEY'S VOYAGE", color: 'limegreen' },
-    '4': { name: "BOHR'S FRONTIER", color: 'crimson' }
+    '4': { name: "Aetherion Arc", color: 'crimson' }
   };
 
   if (!gameData) {
@@ -70,7 +70,7 @@ function StarJourney() {
                 {planetInfo.name}
               </h1>
             </div>
-            <p className="planet-tagline">is the planet you will be exploring!</p>
+            <p className="planet-tagline">is the path you will be exploring!</p>
             <button className="start-journey-button" onClick={handleStartJourney}>
               Start My Journey
             </button>
