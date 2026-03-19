@@ -33,7 +33,7 @@ function StarJourney() {
   // --- NEW: Handler for the final decision ---
   const handleFinalDecision = () => {
     // You'll need to create a new route for this, e.g., '/decision'
-    navigate('/decision'); 
+    navigate('/decision');
   };
 
   const assignedPath = gameData?.teamData?.assignedPath;
@@ -44,18 +44,18 @@ function StarJourney() {
     <div className="star-journey-container">
       <header className="top-bar">
         <span>{teamName}</span>
-        <img 
-          src={societyLogo} 
-          alt="Logout" 
+        <img
+          src={societyLogo}
+          alt="Logout"
           className="society-logo logout-logo"
-          onClick={onLogout} 
+          onClick={onLogout}
         />
       </header>
-      
+
       <main className="main-content">
         <img src={huntPathMap} alt="Star map" className="background-map" />
         <img src={astronautImage} alt="Astronaut" className="background-astronaut" />
-        
+
         {/* --- NEW: Conditional Rendering Logic --- */}
         {currentClue === 5 ? (
           // If it's the 5th clue, show the decision section
